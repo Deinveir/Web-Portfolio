@@ -5,6 +5,14 @@ const switchContainer = document.querySelector('.switch');
 const switchBtn = document.querySelector('.switch-btn');
 const switchLbl = document.querySelector(".switch-label");
 const fogEl = document.querySelector(".fog");
+const skillEl = document.querySelector(".skills");
+const skillSetEl = document.querySelector(".skillset");
+const toolEl = document.querySelector(".tools");
+const toolSetEl = document.querySelector(".toolset");
+transcribeEl = document.getElementById('transcriber');
+recipeEl = document.getElementById('recipe');
+pinporkEl = document.getElementById('pinpork');
+machineEL = document.getElementById('machine');
 
 let introRead = true;
 let xPos = 0;
@@ -70,3 +78,57 @@ fogEl.addEventListener("mousemove", (e) => {
 //     container.appendChild(myProfile);
 //   }
 // });
+let skillShow = true;
+let toolsShow = true;
+
+skillEl.addEventListener('click', () => {
+  if (skillShow) {
+    skillSetEl.style.transform = `translateX(-20px)`;
+    skillSetEl.style.width = `40%`;
+    skillSetEl.style.opacity = `1`;
+    skillShow = false;
+  } else {
+    // skillSetEl.style.transform = `translateX(-500px)`;
+    skillSetEl.style.width = `0`;
+    skillSetEl.style.opacity = `0`;
+    skillShow = true;
+  }
+});
+
+toolEl.addEventListener('click', () => {
+  if (toolsShow) {
+    toolSetEl.style.transform = `translateX(30px)`;
+    toolSetEl.style.width = `40%`;
+    toolSetEl.style.opacity = `1`;
+    toolsShow = false;
+  } else {
+    // toolSetEl.style.transform = `translateX(500px)`;
+    toolSetEl.style.width = `0`;
+    toolSetEl.style.opacity = `0`;
+    toolsShow = true;
+  }
+});
+
+document.addEventListener('mousemove', (e) => {
+  const x = e.clientX;
+  const y = e.clientY;
+  // console.log(x, y);
+});
+
+transcribeEl.addEventListener("click", () => {
+  // Opening an URL 
+  window.open("https://transcriber-app-svf6.onrender.com/", "_blank");
+});
+recipeEl.addEventListener("click", () => {
+  // Opening an URL 
+  window.open("https://recipe-finder-e6m2.onrender.com/", "_blank");
+});
+transcribeEl.addEventListener("click", () => {
+  // Opening an URL 
+  window.open("https://transcriber-app-svf6.onrender.com/", "_blank");
+});
+transcribeEl.addEventListener("click", () => {
+  // Opening an URL 
+  window.open("https://transcriber-app-svf6.onrender.com/", "_blank");
+});
+
