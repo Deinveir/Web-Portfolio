@@ -1,5 +1,6 @@
 const bodyEl = document.querySelector('body');
 const container = document.querySelector('.intro');
+const mainCon = document.querySelector('.main-container');
 const heading = document.querySelector('.intro-text');
 const switchContainer = document.querySelector('.switch');
 const switchBtn = document.querySelector('.switch-btn');
@@ -9,10 +10,12 @@ const skillEl = document.querySelector(".skills");
 const skillSetEl = document.querySelector(".skillset");
 const toolEl = document.querySelector(".tools");
 const toolSetEl = document.querySelector(".toolset");
-transcribeEl = document.getElementById('transcriber');
-recipeEl = document.getElementById('recipe');
-pinporkEl = document.getElementById('pinpork');
-machineEL = document.getElementById('machine');
+const transcribeEl = document.getElementById('transcriber');
+const recipeEl = document.getElementById('recipe');
+const pinporkEl = document.getElementById('pinpork');
+const machineEL = document.getElementById('machine');
+const projectEl = document.querySelectorAll('.project');
+const description = document.querySelectorAll('.description');
 
 let introRead = true;
 let xPos = 0;
@@ -25,6 +28,7 @@ reminder.innerHTML = `
 
 switchContainer.addEventListener('click', () => {
   if (introRead) {
+    mainCon.classList.remove('active');
     switchContainer.classList.add('switch-on');
     fogEl.classList.add('light-on');
     heading.innerHTML = `
@@ -84,12 +88,12 @@ let toolsShow = true;
 skillEl.addEventListener('click', () => {
   if (skillShow) {
     skillSetEl.style.transform = `translateX(-20px)`;
-    skillSetEl.style.width = `40%`;
+    skillSetEl.style.width = `70%`;
     skillSetEl.style.opacity = `1`;
     skillShow = false;
   } else {
-    // skillSetEl.style.transform = `translateX(-500px)`;
     skillSetEl.style.width = `0`;
+    skillSetEl.style.transform = `translateX(-200px)`;
     skillSetEl.style.opacity = `0`;
     skillShow = true;
   }
@@ -98,12 +102,12 @@ skillEl.addEventListener('click', () => {
 toolEl.addEventListener('click', () => {
   if (toolsShow) {
     toolSetEl.style.transform = `translateX(30px)`;
-    toolSetEl.style.width = `40%`;
+    toolSetEl.style.width = `70%`;
     toolSetEl.style.opacity = `1`;
     toolsShow = false;
   } else {
-    // toolSetEl.style.transform = `translateX(500px)`;
     toolSetEl.style.width = `0`;
+    toolSetEl.style.transform = `translateX(-300px)`;
     toolSetEl.style.opacity = `0`;
     toolsShow = true;
   }
