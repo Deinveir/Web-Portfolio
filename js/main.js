@@ -32,7 +32,11 @@ switchContainer.addEventListener('click', () => {
     switchContainer.classList.add('switch-on');
     fogEl.classList.add('light-on');
     heading.innerHTML = `
-      Scroll down. <i class="fa-solid fa-arrow-down"></i>
+    <div class="header">
+      <a class="header1" href="#myProfile">About Me</a>
+      <a class="header2" href="#skills-container">Skills & Tools</a>
+      <a class="header3" href="#projects-container">Projects</a>
+    </div>
     `;
     switchContainer.classList.add('active-switch');
     introRead = false;
@@ -57,6 +61,8 @@ fogEl.addEventListener("mousemove", (e) => {
 
   fogEl.style.background = `radial-gradient(350px at ${x}px ${y}px, transparent, rgba(0, 0, 0, 0.488), black, black)`;
 });
+
+
 
 // reminder.addEventListener("mousemove", (e) => {
 //   let x = e.clientX;
@@ -127,9 +133,9 @@ recipeEl.addEventListener("click", () => {
   // Opening an URL 
   window.open("https://recipe-finder-e6m2.onrender.com/", "_blank");
 });
-transcribeEl.addEventListener("click", () => {
+pinporkEl.addEventListener("click", () => {
   // Opening an URL 
-  window.open("https://transcriber-app-svf6.onrender.com/", "_blank");
+  window.open("https://pinpork.onrender.com/", "_blank");
 });
 transcribeEl.addEventListener("click", () => {
   // Opening an URL 

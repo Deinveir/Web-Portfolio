@@ -2,6 +2,7 @@
   font-family: 'Abhaya Libre', serif;
   /* font-family: 'Playfair Display', serif; */
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body{
@@ -11,8 +12,58 @@ body{
   background-color: black;
 }
 
-.active{
-  display: none;
+.header{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 60%;
+}
+
+.header a{
+  text-decoration: none;
+  color: white;
+  background-color: gray;
+  width: 100%;
+  height: 200px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  transition: all .3s ease-in;
+}
+
+.header a:hover{
+  transform: scale(1.1);
+}
+
+.header1{
+  background: linear-gradient(to right, #fff0e2, #fb50ed);
+  opacity: 0.8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  color: #141301;
+}
+.header2{
+  background: linear-gradient(to right, #64E9EE, rgb(73, 0, 85));
+  opacity: 0.8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  color: #141301;
+}
+.header3{
+  background-image: linear-gradient(to left, #520000, #fff0e2);
+  opacity: 0.8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  color: #141301;
 }
 
 .intro{
@@ -136,7 +187,7 @@ body{
 
 .job-title{
   background-color: transparent;
-  height: 40vh;
+  height: 30vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -144,8 +195,8 @@ body{
   position: relative;
   /* margin: 2rem 0; */
   text-align: center;
-  border-top: 15px rgb(197, 197, 197) solid;
-  border-bottom: 15px rgb(197, 197, 197) solid;
+  border-top: 10px rgb(197, 197, 197) solid;
+  border-bottom: 10px rgb(197, 197, 197) solid;
 }
 
 .job-title h1{
@@ -160,20 +211,18 @@ body{
 }
 
 .quote-container{
-  height: 40vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: black;
-  border-top: 15px rgb(197, 197, 197) solid;
-  border-bottom: 15px rgb(197, 197, 197) solid;
   /* margin-top: -2rem; */
 }
 
 .quote-container h1{
   font-size: 70px;
   font-style: italic;
-  background: linear-gradient(to right, rgb(51, 51, 51), rgb(223, 223, 223));
+  background: linear-gradient(to right, rgb(23, 9, 82), rgb(223, 223, 223), rgb(23, 9, 82));
   background-clip: text; 
   -webkit-background-clip: text;
   color: transparent;
@@ -383,15 +432,14 @@ body{
 }
 
 .mail-container{
-  height: 40vh;
-  background-color: black;
+  height: 30vh;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  border-top: 15px rgb(197, 197, 197) solid;
-  border-bottom: 15px rgb(197, 197, 197) solid;
+  border-top: 10px rgb(197, 197, 197) solid;
+  border-bottom: 10px rgb(197, 197, 197) solid;
 }
 
 .mail-container span{
@@ -425,6 +473,7 @@ body{
   margin: 0;
   margin-left: -10rem;
   text-align: center;
+  
   /* Gradient on text  */
   background-image: linear-gradient(to right, #520000, #fff0e2);
   background-clip: text; 
@@ -466,7 +515,7 @@ body{
 }
 
 .project:hover{
-  background: linear-gradient(0.90turn, rgb(138, 74, 74), rgb(71, 0, 0));
+  background: linear-gradient(0.90turn, rgb(171, 95, 95), rgb(90, 30, 30));
   border: none;
   transform: scale(1.2);
 }
