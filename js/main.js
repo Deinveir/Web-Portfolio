@@ -18,7 +18,7 @@ const projectEl = document.querySelectorAll('.project');
 const description = document.querySelectorAll('.description');
 
 let introRead = true;
-let xPos = 0;
+// let xPos = 0;
 
 const reminder = document.createElement('div');
 reminder.classList.add('reminder');
@@ -28,7 +28,7 @@ reminder.innerHTML = `
 
 switchContainer.addEventListener('click', () => {
   if (introRead) {
-    mainCon.classList.remove('active');
+    // mainCon.classList.remove('active');
     switchContainer.classList.add('switch-on');
     fogEl.classList.add('light-on');
     heading.innerHTML = `
@@ -48,9 +48,9 @@ switchContainer.addEventListener('click', () => {
     heading.innerText = "Please turn on the light.";
     switchContainer.classList.remove('active-switch');
     introRead = true;
-    heading.style.transform = `translateX(0px)`;
+    // heading.style.transform = `translateX(0px)`;
     heading.classList.add('text-null');
-    xPos = 0;
+    // xPos = 0;
     fogEl.style.opacity = "1";
   }
 });
