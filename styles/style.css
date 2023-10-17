@@ -373,7 +373,7 @@ body{
   font-weight: 600;
   opacity: 0;
   display: grid;
-  grid-template-columns: repeat(5, auto);
+  grid-template-columns: repeat(7, auto);
   gap: 2rem;
   text-align: center;
 }
@@ -393,7 +393,7 @@ body{
   opacity: 0;
   transition: all .5s ease;
   display: grid;
-  grid-template-columns: repeat(5, auto);
+  grid-template-columns: repeat(6, auto);
   gap: 10px;
 }
 

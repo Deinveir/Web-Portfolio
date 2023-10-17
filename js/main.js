@@ -10,6 +10,7 @@ const skillEl = document.querySelector(".skills");
 const skillSetEl = document.querySelector(".skillset");
 const toolEl = document.querySelector(".tools");
 const toolSetEl = document.querySelector(".toolset");
+const tool = document.querySelector(".tool");
 const transcribeEl = document.getElementById('transcriber');
 const recipeEl = document.getElementById('recipe');
 const pinporkEl = document.getElementById('pinpork');
@@ -110,11 +111,13 @@ toolEl.addEventListener('click', () => {
     toolSetEl.style.transform = `translateX(30px)`;
     toolSetEl.style.width = `70%`;
     toolSetEl.style.opacity = `1`;
+    tool.style.width = "120px";
     toolsShow = false;
   } else {
     toolSetEl.style.width = `0`;
     toolSetEl.style.transform = `translateX(-300px)`;
     toolSetEl.style.opacity = `0`;
+    tool.style.width = "0px";
     toolsShow = true;
   }
 });
